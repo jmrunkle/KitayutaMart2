@@ -1,7 +1,14 @@
 
 public class KitayutaMart2 {
 	public static int numBought(int K, int T) {
-		return 0;
+		int n;
+		int total = T;
+		int cost = K;
+		for (n = 0; total >= cost; n++) {
+			total -= cost;
+			cost *= 2;
+		}
+		return n;
 	}
 
 	public static void main(String args[]) {
